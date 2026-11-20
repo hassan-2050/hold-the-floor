@@ -1,0 +1,64 @@
+/* Hold the Floor design tokens: "Unhurried conversation".
+   Flat mist background, deep teal, one amber signal for "holding",
+   hyperlegible type. No gradients, no shadows. */
+:root {
+  /* Colour (contrast ratios on --mist from the plan, section 5.2) */
+  --mist: #F3F6F4;           /* background, flat */
+  --teal: #0F5257;           /* primary; 8.2:1 on mist, white on teal 8.9:1 */
+  --teal-ink: #0A3B3F;       /* pressed state */
+  --ink: #142024;            /* text, outlines; 15.3:1 */
+  --ink-2: #3B4A4F;          /* secondary text; ≥ 7:1 on mist */
+  --amber: #E0A100;          /* holding accent; ink on amber 7.3:1 */
+  --amber-soft: #F6E3B0;     /* hold band fill behind ink text */
+  --success: #2E7D4F;        /* "ready"; 4.6:1 */
+  --error: #B42318;          /* errors only; 6.0:1 */
+  --white: #FFFFFF;
+  --line: #C9D3CF;           /* hairlines and lane rules */
+  --ghost: rgba(20, 32, 36, 0.35); /* ghost-timer markers, dashed */
+  --unavailable: #8A9893;    /* "not visible" lane hatching */
+
+  /* Type */
+  --font: 'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --mono: 'Atkinson Hyperlegible Mono', ui-monospace, monospace;
+  --body: 20px;
+  --body-lh: 32px;
+  --small: 18px;             /* minimum anywhere */
+  --small-lh: 28px;
+  --h1: 40px;
+  --h1-lh: 48px;
+  --h2: 28px;
+  --h2-lh: 36px;
+  --h3: 22px;
+  --h3-lh: 30px;
+  --question: 34px;
+  --question-lh: 46px;
+
+  /* Space and size */
+  --s1: 8px;
+  --s2: 16px;
+  --s3: 24px;
+  --s4: 32px;
+  --s5: 48px;
+  --s6: 64px;
+  --pill-h: 56px;
+  --input-h: 52px;
+  --column: 880px;
+  --ribbon-h: 160px;
+  --cue-col: 200px;
+  --sheet-w: 480px;
+  --radius: 28px;
+
+  /* Focus */
+  --focus: 3px solid var(--amber);
+  --focus-offset: 2px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --t: 300ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --t: 0ms;
+  }
+}

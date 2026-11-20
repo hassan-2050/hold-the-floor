@@ -1,0 +1,16 @@
+{
+  "id": "places",
+  "title": "Places and things you like",
+  "questions": [
+    "Tell me about a place you like.",
+    "What do you usually see on the way to that place?",
+    "Describe a room where you feel comfortable.",
+    "Tell me about a trip you remember well.",
+    "What is a park or street near you like?",
+    "Describe your favourite season and what you do in it.",
+    "Tell me about a building you find interesting.",
+    "What would you show a visitor in your town?",
+    "Describe a view you enjoy.",
+    "Tell me about somewhere you would like to go one day."
+  ]
+}

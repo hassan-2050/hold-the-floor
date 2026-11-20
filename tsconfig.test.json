@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2023", "DOM"],
+    "types": ["node", "vite/client"]
+  },
+  "include": ["tests/unit/**/*.ts", "tests/tools/**/*.ts", "tests/e2e/**/*.ts", "src/shared/bridge.ts", "src/shared/settings.ts", "src/shared/sdkConfig.ts", "src/turn/**/*.ts", "src/features/**/*.ts", "src/audio/detector.ts", "src/results/**/*.ts", "src/sensing/qualityGate.ts", "src/sensing/replay.ts", "src/sensing/recording.ts", "src/sensing/types.ts", "src/sensing/validationCodes.ts", "src/sensing/errors.ts", "config/**/*.ts"]
+}

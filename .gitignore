@@ -1,0 +1,15 @@
+node_modules/
+out/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+probe/logs/
+test-results/
+playwright-report/
+*.log
+
+# Results exports saved into the project folder
+/hold-the-floor-*.csv
+/hold-the-floor-*.md

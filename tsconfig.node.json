@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2023"],
+    "types": ["node"]
+  },
+  "include": ["electron/**/*.ts", "probe/main.ts", "probe/preload.ts", "config/**/*.ts", "electron.vite.config.ts", "vitest.config.ts", "playwright.config.ts", "src/shared/**/*.ts"]
+}
