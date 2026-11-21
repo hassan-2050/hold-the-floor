@@ -40,7 +40,7 @@ adults, and builders of voice agents, through a local `end_of_turn` WebSocket AP
 ## Setup from a fresh clone
 
 ```bash
-git clone <this repo> hold-the-floor
+git clone https://github.com/hassan-2050/hold-the-floor.git
 cd hold-the-floor
 npm install                 # pulls the SDK's native runtimes for all platforms (a few hundred MB)
 npm run build
