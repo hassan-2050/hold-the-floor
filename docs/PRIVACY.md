@@ -63,6 +63,10 @@ A saved session is JSON lines of: frame times; x/y for 26 face points (lips, eye
 
 A separate tool for making the demo video, never active in a normal start. It records the app's own window, the system audio and the microphone into an MP4 in your Videos folder from the moment the app opens. A script window above the app shows **● REC** the whole time and has a Stop button. The video stays on your computer; the app never uploads it. Because this recording contains video and audio, it is outside the product's numbers-only guarantee. Use it only for your own demo.
 
+## Web replay page
+
+[hassan-2050.github.io/hold-the-floor](https://hassan-2050.github.io/hold-the-floor/) runs the same interface in a browser, for replay only. It never asks for the camera or microphone and contains no SmartSpectra code. It loads only its own files and the bundled numbers-only session, and makes no other requests. Settings and any session you save there stay in the tab's memory and are gone when you close it; exports download to your computer. GitHub Pages hosts it, so GitHub's own privacy statement covers the page visit itself.
+
 ## What the app never does
 
 It does not identify you, infer emotions or health, transcribe or judge speech, or detect, rate or treat stuttering or any other condition. It decides only when the agent may reply.

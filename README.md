@@ -2,6 +2,9 @@
 
 **Voice AI that can see you are not finished yet.**
 
+**Try it in your browser:** [hassan-2050.github.io/hold-the-floor](https://hassan-2050.github.io/hold-the-floor/) replays a recorded live session through the same engine (no install, camera or key).
+**Videos:** [live demo](https://www.youtube.com/watch?v=4EyiS4MOHbE) (2:49) · [narrated walkthrough](https://www.youtube.com/watch?v=w9QwNYEWEj0) (3:03).
+
 Voice assistants end your turn after a fixed silence, so they cut off people
 who pause, search for words or stutter. During a silent stuttering block there
 may be no sound at all, so an audio-only detector cannot tell you are still
@@ -56,11 +59,12 @@ Optional, for development: `cp .env.example .env` and set `SMARTSPECTRA_API_KEY=
 | --- | --- |
 | Live app | `npm start` |
 | **Replay without camera or key** (for judges) | `npm run start:replay`, or press *Watch replay* on the Welcome screen |
+| **Web replay page** (no install) | [hassan-2050.github.io/hold-the-floor](https://hassan-2050.github.io/hold-the-floor/). Build it with `npm run build:web` (`dist/web`); publish it to the `gh-pages` branch with `npm run deploy:web` |
 | Live app with a troubleshooting log | `npm run start:debug` (writes event names, SDK codes and frame counts, no face data or audio, to `debug.log` in the app data folder) |
 | Demo recording mode | `npm run demo`: records the app window, the agent's voice and your mic to your Videos folder, with a script window above the app (not recorded); `npm run demo:script` gives the script window without recording. See [docs/DEMO.md](docs/DEMO.md) |
 | Development with hot reload | `npm run dev` |
 | Unit tests (100) | `npm test` |
-| End-to-end tests (9, no camera needed) | `npm run test:e2e` |
+| End-to-end tests (10, no camera needed; one builds and plays the web page) | `npm run test:e2e` |
 | Lint / typecheck | `npm run lint` / `npm run typecheck` |
 | Ablation on a recording | `npm run ablation` (or `RECORDING=path.jsonl npm run ablation`) |
 | Stage 1 SDK probe | `npm run probe`, then `npm run probe:analyze` (see [probe/README.md](probe/README.md)) |
@@ -135,6 +139,7 @@ src/turn          arbiter, shadow timers, engine, ribbon buffer, event types
 src/agent         interviewer, voice, question sets
 src/results       per-policy metrics, CSV/Markdown
 src/app, src/screens, src/ui, src/state, src/styles   the interface
+src/web           web replay page: browser stand-in for the desktop bridge, SDK stub
 config/thresholds.ts   every tunable number
 fixtures/sessions      bundled numbers-only recordings for replay (live demo session, Stage 1 protocol run)
 probe/                 Stage 1 SDK probe and analyzer
