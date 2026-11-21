@@ -36,6 +36,8 @@ export interface AppInfo {
   demo: boolean;
   /** Demo mode records the window (false with `norec`: script window only). */
   demoRecord: boolean;
+  /** Set only on the web replay page (src/web): replay only, no desktop bridge. */
+  web?: { repoUrl: string };
 }
 
 export interface AppBridge {

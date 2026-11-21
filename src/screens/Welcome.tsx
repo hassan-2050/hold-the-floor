@@ -10,6 +10,8 @@ export function Welcome() {
   const [demo] = useState(startDemoRibbon);
   useEffect(() => () => demo.stop(), [demo]);
   const getRibbon = useCallback((): Ribbon | null => demo.ribbon, [demo]);
+  // The web replay page has no camera path: replay only, plus a link to the app.
+  const web = useApp((s) => s.info?.web ?? null);
 
   return (
     <div className="column" style={{ maxWidth: 980 }}>
@@ -26,14 +28,28 @@ export function Welcome() {
           Illustration: a 3-second pause with lips pressed. The dashed line is where a 2-second timer would cut in. The amber band is Hold the Floor waiting.
         </figcaption>
       </figure>
-      <div className="row">
-        <button className="pill primary" onClick={() => useApp.getState().go('consent')} autoFocus>
-          Start <ArrowRight size={22} />
-        </button>
-        <button className="pill secondary" onClick={() => void startBundledReplay()}>
-          <Play size={22} /> Watch replay (no camera)
-        </button>
-      </div>
+      {web ? (
+        <>
+          <div className="row">
+            <button className="pill primary" onClick={() => void startBundledReplay()} autoFocus>
+              <Play size={22} /> Watch replay
+            </button>
+          </div>
+          <p className="small" style={{ maxWidth: 820 }}>
+            This page replays a recorded live session through the same engine, right in your browser: no camera, microphone or key. The live app, with your own camera and
+            the SmartSpectra SDK, runs on your computer: <a href={web.repoUrl}>code and setup on GitHub</a>.
+          </p>
+        </>
+      ) : (
+        <div className="row">
+          <button className="pill primary" onClick={() => useApp.getState().go('consent')} autoFocus>
+            Start <ArrowRight size={22} />
+          </button>
+          <button className="pill secondary" onClick={() => void startBundledReplay()}>
+            <Play size={22} /> Watch replay (no camera)
+          </button>
+        </div>
+      )}
       <p className="small muted" style={{ maxWidth: 820 }}>
         Hold the Floor is a conversation tool. It does not detect, rate or treat stuttering or any condition, and it does not judge what you say.
       </p>

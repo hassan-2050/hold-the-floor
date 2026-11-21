@@ -325,10 +325,13 @@ a {
   min-height: 0;
   height: 100%;
   padding: 0 var(--s4);
+  /* Short windows (a replay banner, a laptop browser): scroll here instead
+     of sliding under the floor ribbon, which would block the buttons. */
+  overflow-y: auto;
 }
 .stage {
   display: grid;
-  align-content: center;
+  align-content: safe center;
   justify-items: center;
   gap: var(--s4);
   min-height: 0;

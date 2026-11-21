@@ -12,6 +12,8 @@
   "scripts": {
     "dev": "electron-vite dev",
     "build": "electron-vite build",
+    "build:web": "vite build --config vite.web.config.mts",
+    "deploy:web": "npm run build:web && node scripts/web/deploy-pages.mjs",
     "start": "electron-vite build && electron .",
     "start:replay": "electron-vite build && electron . --replay",
     "probe": "electron-vite build && electron out/main/probe.js",
