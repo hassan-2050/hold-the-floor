@@ -34,6 +34,12 @@ adults, and builders of voice agents, through a local `end_of_turn` WebSocket AP
 - **end_of_turn API**: a WebSocket on 127.0.0.1 with a random token. See [docs/WS-API.md](docs/WS-API.md).
 - **Replay**: numbers-only recordings drive the same engine. The live demo session (5 answers) is bundled, so you can try the app **without a camera or key** and see the decisions the live run made.
 
+## Screenshots
+
+| Live: the 2 s timer would have cut in; Hold the Floor holds | Live: camera covered, cues paused | Results on the same session |
+| --- | --- | --- |
+| ![Live demo: the 2-second timer would have cut in while Hold the Floor holds on lips set](docs/images/live-cut-in.png) | ![Live demo with the camera covered: camera cues paused, plain 2-second timer](docs/images/live-camera-covered.png) | ![Results: Hold the Floor 0 would-be cut-offs at a 1.00 s median](docs/images/replay-results.png) |
+
 ## Requirements
 
 - Windows x64, macOS on Apple Silicon, or Linux x64/ARM64 with glibc 2.35+ (the platforms the SmartSpectra Node SDK supports). Intel Macs are not supported.
